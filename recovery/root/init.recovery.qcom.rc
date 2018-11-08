@@ -1,0 +1,5 @@
+import init.recovery.usb.rc
+
+on fs
+    wait /dev/block/platform/soc.0
+    symlink /dev/block/platform/soc.0 /dev/block/bootdevice
