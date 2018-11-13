@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from himaul device
+# Inherit from LA29 device
 $(call inherit-product, device/sharp/LA29/device.mk)
 
 # Set those variables here to overwrite the inherited values.

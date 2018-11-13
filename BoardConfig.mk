@@ -1,11 +1,3 @@
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8994
-TARGET_NO_BOOTLOADER := true
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8994
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno430
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -19,10 +11,17 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+TARGET_BOARD_PLATFORM := msm8994
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno430
+
 TARGET_USES_64_BIT_BINDER := true
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8994
+TARGET_NO_BOOTLOADER := true
+
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.bootdevice=f9824900.sdhci androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := -2
@@ -50,9 +49,4 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # TWRP specific build flags
 #RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_DEFAULT_BRIGHTNESS := 128
-TW_IGNORE_MISC_WIPE_DATA := true
-TARGET_RECOVERY_FSTAB := device/sharp/LA29/recovery/root/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/sharp/LA29/rootdir/etc/fstab.qcom
